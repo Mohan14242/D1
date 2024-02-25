@@ -1,8 +1,6 @@
-arg version
-from almalinux:${version}
-run echo "the arg vairable is passed id ${version}"
-arg course 
-arg trainer 
-env course=${course}
-env trainer=${trainer}
-
+from almalinux 
+run yum install nginx -y 
+run rm -f /usr/share/nginx/html/index.html
+workdir /usr/share/nginx/html/
+onbuild add index.html 
+cmd ["nginx","-g","daemon off;"]
