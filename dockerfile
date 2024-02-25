@@ -1,6 +1,2 @@
-from almalinux
-run yum install nginx -y
-run useradd mohan
-user mohan
-workdir /tmp
-run echo "mohan this is the mohan who are you then" > mohan.txt
+arg version
+from almalinux:${version}
