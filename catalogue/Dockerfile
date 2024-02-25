@@ -4,4 +4,5 @@ workdir /opt/server
 copy package.json .
 copy server.js .
 run npm install 
+env MONGO=True
 cmd ["node","server.js"]
