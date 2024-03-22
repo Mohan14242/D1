@@ -1,8 +1,0 @@
-networks:
-  roboshop:
-    driver: bridge 
-services:
-  web:
-    image: web:1.0
-    container_name: web 
-    
