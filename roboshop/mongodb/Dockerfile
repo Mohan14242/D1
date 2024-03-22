@@ -1,2 +1,2 @@
 from mongo:5 
-copy user.js /docker-entrypoint-initdb.d/
+add  https://roboshop-builds.s3.amazonaws.com/user.zip  /docker-entrypoint-initdb.d/
