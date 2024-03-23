@@ -14,9 +14,14 @@ services:
       - roboshop 
     ports: 
       - "80:80"
+    depends_on: 
+      - mongodb 
+      - catalogue
   catalogue: 
     image: catalogue:1.0 
     container_name: catalogue 
     networks: 
       - roboshop 
+    depends_on: 
+      - mongodb 
   
