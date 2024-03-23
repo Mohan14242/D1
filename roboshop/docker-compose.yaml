@@ -36,4 +36,9 @@ services:
     depends_on: 
       - mongodb
       - redis 
+  mysql: 
+    image: mysql:1.0 
+    container_name: mysql 
+    networks: 
+      - roboshop 
   
