@@ -1,8 +1,8 @@
-from node:14 
-expose 8080 
-workdir /opt/server 
-copy package.json . 
-copy server.js . 
-run npm install 
-env MONGO=true
-cmd ["node","server.js"]
+FROM node:14
+EXPOSE 8080
+WORKDIR /opt/server
+COPY package.json .
+COPY server.js .
+RUN npm install
+ENV MONGO=true
+CMD ["node", "server.js"]
