@@ -17,6 +17,7 @@ services:
     depends_on: 
       - mongodb 
       - catalogue
+      - user
   redis: 
     image: redis 
     container_name: redis
