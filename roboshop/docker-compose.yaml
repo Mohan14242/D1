@@ -17,6 +17,11 @@ services:
     depends_on: 
       - mongodb 
       - catalogue
+  redis: 
+    image: redis 
+    container_name: redis
+    networks: 
+      - roboshop 
   catalogue: 
     image: catalogue:1.0 
     container_name: catalogue 
@@ -24,4 +29,10 @@ services:
       - roboshop 
     depends_on: 
       - mongodb 
+  user: 
+    image: user:1.0 
+    container_name: user 
+    depends_on: 
+      - mongodb
+      - redis 
   
