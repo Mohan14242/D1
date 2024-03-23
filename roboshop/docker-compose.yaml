@@ -1,0 +1,21 @@
+networks: 
+
+services: 
+  mongodb: 
+    image: mongodb:1.0 
+    container_name: mongodb 
+    networks: 
+      - roboshop 
+  web: 
+    image: web:1.o 
+    container_name: web 
+    networks: 
+      - roboshop 
+    ports: 
+      - "80:80"
+  catalogue: 
+    image: catalogue:1.0 
+    container_name: catalogue 
+    networks: 
+      - roboshop 
+  
